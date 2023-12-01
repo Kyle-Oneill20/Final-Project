@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import './Comp.css'
+import Update from "./Update";
 
 export default function PetDisplay() {
 
@@ -18,18 +19,20 @@ export default function PetDisplay() {
 
     return (
         <div>
-            <header>
+            <header className="petsHeader">
                 <br></br> <h1 className="text-center"> Current Pets</h1><br></br>
+                
             </header>
             {Pets.map((Pets, index) =>
 
                 
-                    <div id="plzWork" className="userContainer, text-center" key={index}>
+                    <div  className="userContainer text-center plzWork" key={index}>
                         <div id="PetDisplay">
                             <h4> Pet ID # {Pets.id}</h4>
                             <p> Name : {Pets.Name}</p>
                             <p>Breed : {Pets.Breed} </p>
                             <p>Age : {Pets.Age}</p>
+                            <Update/>
                         </div>
                     </div>
                 

@@ -1,16 +1,17 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import './Comp.css'
 
 
 export default function Remove() {
     const API_URL = "https://654fe5f0358230d8f0cdca09.mockapi.io/api1/Pets"
-    const [Pets, setPets] = useState([{}])
+    const [pets, setPets] = useState([{}])
     
-    function deletePet(id) {
-        fetch(`${API_URL}/${id}`, {
+    function deletePet(pet) {
+        fetch(`${API_URL}/${pet.id}`, {
             method: "DELETE"
         }).then(() => getPets()).then(alert("Your pet is Checked Out!!"))
-    
+    }
     
     function getPets() {
         fetch(API_URL)
@@ -19,28 +20,28 @@ export default function Remove() {
     }
     useEffect(() => {
         getPets()
-        console.log(Pets)
+        console.log(pets)
     }, [])
-    
+
     
     
     
         return (
-                <div className="Leave">
-                    <h1 className="text-center"> Current Pets</h1>
+                <div className="leave">
                     
-                    {Pets.map((Pets, index) =>
-                            <div className="petContainer, text-center" key={index}>
-                                <div id="PetDisplay">
-                                    <h4> Pet ID # {Pets.id}</h4>
-                                    <p> Name : {Pets.Name}<br></br></p>
-                                    <p>Breed : {Pets.Breed}<br></br> </p>
-                                    <p>Age : {Pets.Age}<br></br></p>
-                                    <button onClick={() => deletePet(Pets.id)}>Check Out</button>
+                    <h1 className=" leavePets text-center"> Current Pets</h1>
+                    
+                    {pets.map((pet, index) =>
+                            <div className="petContainer text-center" key={index}>
+                                <div className="petDisplay">
+                                    <h4> Pet ID # {pet.id}</h4>
+                                    <p> Name : {pet.Name}<br></br></p>
+                                    <p>Breed : {pet.Breed}<br></br> </p>
+                                    <p>Age : {pet.Age}<br></br></p>
+                                    <button className='petLeave' onClick={() => deletePet(pet)}>Check Out</button>
                                 </div>
                             </div>
                     )}
                 </div>
             )
-    }
 }

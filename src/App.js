@@ -9,6 +9,7 @@ import About from './Components/About.js';
 import Remove from './Components/Remove.js';
 import Add from './Components/Add.js';
 import Navbar from './Components/Navbar.js';
+import Change from './Components/Change.js';
 
 export default function App() {
   return (
@@ -32,6 +33,10 @@ export default function App() {
 
             <Route path="/add">
               <Add />
+            </Route>
+
+            <Route path="/change">
+              <Change/>
             </Route>
           </Switch>
         </div>

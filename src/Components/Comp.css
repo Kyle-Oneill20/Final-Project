@@ -38,6 +38,9 @@ input{
     border-radius: 10px;
     padding: 5px;
 }
+input:hover{
+    background-color: aliceblue;
+}
 select{
     border: none;
     border-radius: 10px;
@@ -49,13 +52,17 @@ option{
     border-radius: 5px;
 }
 select:hover{
-    background-color: beige;
+    background-color: rgba(240, 248, 255, 2);
 }
 option:hover{
-    background-color: beige;
+    background-color: rgba(240, 248, 255, 2);
 }
 li:hover{
     background-color: color(from black srgb r g b);
+}
+button:hover{
+    background-color: rgba(240, 248, 255, 2);
+
 }
 
 .dogImage{
@@ -69,4 +76,12 @@ li:hover{
 
 nav{
     justify-content: center;
+}
+.dogPic{
+    height: auto;
+    width: 50%;
+}
+.warning{
+    text-decoration: underline;
+    
 }

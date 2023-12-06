@@ -18,7 +18,7 @@ export default function Update(){
     }, [])
     
     function updatePet(e,petObject){
-        e.preventDefault
+        
         let updatedPetObject = {
             ...petObject,
             Name: updatedName,
@@ -33,7 +33,7 @@ export default function Update(){
             headers:{
                 "Content-Type": "application/json"
             },
-        }).then(console.log(updatedPetObject)).then(()=>getPets()).then(alert("Pet Info Updated!")).then(<Home/>)
+        }).then(console.log(updatedPetObject)).then(()=>getPets()).then(alert("Pet Info Updated!")).then(Update)
     }
     
     

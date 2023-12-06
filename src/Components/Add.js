@@ -11,7 +11,7 @@ export default function Add() {
     const [newVaccine, setNewVaccine] = useState(Boolean)
     const [newAggression, setNewAggression] = useState(Boolean)
     function postNewPets(e) {
-        e.preventDefault()
+       
 
         console.log(newPetsName, newPetsBreed, newPetsAge, newVaccine,newAggression)
 
@@ -56,15 +56,15 @@ export default function Add() {
             <form>
                 <h2 className="lead">
                     <label>Name</label><br></br>
-                    <input className="required" onChange={(e) => setNewPetsName(e.target.value)} required></input><br></br>
+                    <input className="required" onChange={(e) => setNewPetsName(e.target.value)} required={true}/><br></br>
                     <label>Breed</label><br></br>
-                    <input className="required" onChange={(e) => setNewPetsBreed(e.target.value)} required></input><br></br>
+                    <input className="required" onChange={(e) => setNewPetsBreed(e.target.value)} required={true}/><br></br>
                     <label>Age</label><br></br>
-                    <input className="required" onChange={(e) => setNewPetsAge(e.target.value)} required></input><br></br>
+                    <input className="required" onChange={(e) => setNewPetsAge(e.target.value)} required={true}/><br></br>
 
                     <div className=" custom-select buttongroup">
                         <br></br><label> Is your pet Vaccinated?</label><br></br>
-                        <br></br><select onChange={(e) => setNewVaccine(e.target.value)}>
+                        <br></br><select onChange={(e) => setNewVaccine(e.target.value)} required={true}>
                             <option> Please select an option to move on</option>
                             <option value="true" >Yes</option>
                             <option value="false" >No</option>
@@ -73,7 +73,7 @@ export default function Add() {
 
                     <div className=" custom-select buttongroup">
                         <br></br><label>Has your pet had a history of aggression towards humans, or ever bitten anyone?</label><br></br>
-                        <br></br><select onChange={(e) => setNewAggression(e.target.value)}>
+                        <br></br><select onChange={(e) => setNewAggression(e.target.value)} required={true}>
                             <option>  Please select option to move on</option>
                             <option value= "true" > Yes </option>
                             <option value= "false" > No</option>

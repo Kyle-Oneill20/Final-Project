@@ -57,3 +57,16 @@ option:hover{
 li:hover{
     background-color: color(from black srgb r g b);
 }
+
+.dogImage{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+nav{
+    justify-content: center;
+}

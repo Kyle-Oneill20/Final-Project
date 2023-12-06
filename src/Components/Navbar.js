@@ -3,7 +3,7 @@ import './Comp.css'
 
 export default function Navbar(){
     return (
-        <nav className='navbar navbar-inverse text-center'>
+        <nav className='navbar navbar-inverse text-center flex-container'>
           <ul className="nav navbar-nav">
             <li className="nav-item">
               <Link to="/home">Home</Link>

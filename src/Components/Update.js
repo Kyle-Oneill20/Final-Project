@@ -33,7 +33,7 @@ export default function Update(){
             headers:{
                 "Content-Type": "application/json"
             },
-        }).then(console.log(updatedPetObject)).then(()=>getPets()).then(alert("Pet Info Updated!")).then(Update)
+        }).then(console.log(updatedPetObject)).then(()=>getPets()).then(alert("Pet Info Updated!")).then(Home)
     }
     
     

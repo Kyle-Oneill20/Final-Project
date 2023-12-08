@@ -27,7 +27,7 @@ export default function PetDisplay() {
                 
                     <div  className="userContainer text-center plzWork" key={index}>
                         <div className="lead" id="PetDisplay">
-                            <h4> Pet ID # {pet.id}</h4>
+                            <h2> Pet ID # {pet.id}</h2>
                             <p> Name : {pet.Name}</p>
                             <p>Breed : {pet.Breed} </p>
                             <p>Age : {pet.Age}</p>
